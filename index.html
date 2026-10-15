@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Siglo XXI - Revolución digital y biológica</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="menu container">
+      <input type="checkbox" id="menu">
+      <label for="menu" class="menu-label">☰</label>
+      <a class="logo-1" href="#"><img src="img/logo-usco.png" alt="Universidad Surcolombiana"></a>
+
+      <nav class="navbar">
+        <div class="menu-1">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#productos">Inventos</a></li>
+            <li><a href="#info">Contexto</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo central -->
+        <a class="logo-2" href="#"><img src="img/logo-usco.png" alt="Universidad Surcolombiana"></a>
+
+        <div class="menu-2">
+          <ul>
+            <li><a href="#horario">Línea de tiempo</a></li>
+            <li><a href="#inventores">Inventores</a></li>
+            <li><a href="#conclusiones">Fuentes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO SLIDER -->
+    <div class="header-content container">
+      <div class="swiper myswiper-1">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="slider">
+              <div class="slider-txt">
+                <p class="kicker">Exposición global · 2001 → hoy</p>
+                <h1>Siglo <span>XXI</span></h1>
+                <p>Inventos que cambiaron la forma de vivir, trabajar y pensar.</p>
+                <div class="botones">
+                  <a class="btn-1" href="#productos">Ver inventos</a>
+                </div>
+              </div>
+              <div class="slider-img">
+                <div class="visual visual-iconos">
+                  <img src="img/iphone.jpg" alt="iPhone" data-foto>
+                  <img src="img/crispr.jpg" alt="CRISPR" data-foto>
+                  <img src="img/falcon9.jpg" alt="Falcon 9" data-foto>
+                  <img src="img/bitcoin.jpg" alt="Bitcoin" data-foto>
+                  <img src="img/chatgpt.jpg" alt="ChatGPT" data-foto>
+                  <img src="img/arnm.jpg" alt="Vacunas de ARNm" data-foto>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slider">
+              <div class="slider-txt">
+                <p class="kicker">Línea de tiempo</p>
+                <h1>Un siglo acelerado</h1>
+                <p>Del nacimiento de Wikipedia en 2001 al despliegue público de ChatGPT en 2022: ocho hitos que marcaron la época.</p>
+                <div class="botones">
+                  <a class="btn-1" href="#horario">Ver línea de tiempo</a>
+                </div>
+              </div>
+              <div class="slider-img">
+                <div class="visual visual-anios">
+                  <strong>2001</strong>
+                  <em>→</em>
+                  <strong>hoy</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slider">
+              <div class="slider-txt">
+                <p class="kicker">Serendipia y pivotes</p>
+                <h1>Pensados para una cosa, famosos por otra</h1>
+                <p>A veces, el invento más grande es un giro inesperado.</p>
+                <div class="botones">
+                  <a class="btn-1" href="#giro">Ver giros de función</a>
+                </div>
+              </div>
+              <div class="slider-img">
+                <div class="visual visual-giro">
+                  <s>Facemash</s>
+                  <span class="flecha">↓</span>
+                  <strong>Facebook</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Flechas y paginación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN: INVENTOS (tabs + swiper por tab) -->
+  <main id="productos" class="productos">
+    <div class="section-head container">
+      <p class="kicker">Panorama general</p>
+      <h2>8 inventos que cambiaron el juego</h2>
+    </div>
+
+    <div class="tabs container">
+
+      <!-- TAB 1: Software -->
+      <input type="radio" name="tabs" id="tabs1" class="tabinput" checked value="1">
+      <label for="tabs1">Software</label>
+      <div class="tab cat-software">
+        <div class="swiper myswiper-2" id="swiper1">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2007</h4>
+                  <div class="foto"><img src="img/iphone.jpg" alt="iPhone" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>iPhone</h4>
+                  <p>Smartphone + internet táctil.</p>
+                  <span class="inventor">Apple / Steve Jobs</span>
+                  <button class="btn-detalle" onclick="verInvento('iphone')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2004</h4>
+                  <div class="foto"><img src="img/facebook.jpg" alt="Facebook" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>Facebook</h4>
+                  <p>Red social global.</p>
+                  <span class="inventor">Mark Zuckerberg y compañeros</span>
+                  <button class="btn-detalle" onclick="verInvento('facebook')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2005</h4>
+                  <div class="foto"><img src="img/youtube.jpg" alt="YouTube" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>YouTube</h4>
+                  <p>Plataforma de video online.</p>
+                  <span class="inventor">Hurley, Chen y Karim</span>
+                  <button class="btn-detalle" onclick="verInvento('youtube')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2022</h4>
+                  <div class="foto"><img src="img/chatgpt.jpg" alt="ChatGPT" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>ChatGPT</h4>
+                  <p>IA generativa y síntesis.</p>
+                  <span class="inventor">OpenAI / Google</span>
+                  <button class="btn-detalle" onclick="verInvento('chatgpt')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- TAB 2: Ciencia y salud -->
+      <input type="radio" name="tabs" id="tabs2" class="tabinput" value="2">
+      <label for="tabs2">Ciencia y salud</label>
+      <div class="tab cat-salud">
+        <div class="swiper myswiper-2" id="swiper2">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2012</h4>
+                  <div class="foto"><img src="img/crispr.jpg" alt="CRISPR-Cas9" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>CRISPR-Cas9</h4>
+                  <p>Edición genómica precisa.</p>
+                  <span class="inventor">Doudna &amp; Charpentier</span>
+                  <button class="btn-detalle" onclick="verInvento('crispr')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2020</h4>
+                  <div class="foto"><img src="img/arnm.jpg" alt="Vacunas de ARNm" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>Vacunas de ARNm</h4>
+                  <p>Medicina acelerada.</p>
+                  <span class="inventor">Karikó &amp; Weissman</span>
+                  <button class="btn-detalle" onclick="verInvento('arnm')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- TAB 3: Espacio -->
+      <input type="radio" name="tabs" id="tabs3" class="tabinput" value="3">
+      <label for="tabs3">Espacio</label>
+      <div class="tab cat-espacio">
+        <div class="swiper myswiper-2" id="swiper3">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2015</h4>
+                  <div class="foto"><img src="img/falcon9.jpg" alt="Falcon 9" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>Falcon 9</h4>
+                  <p>Astronáutica reutilizable.</p>
+                  <span class="inventor">SpaceX / Elon Musk</span>
+                  <button class="btn-detalle" onclick="verInvento('falcon9')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <!-- TAB 4: Finanzas -->
+      <input type="radio" name="tabs" id="tabs4" class="tabinput" value="4">
+      <label for="tabs4">Finanzas</label>
+      <div class="tab cat-finanzas">
+        <div class="swiper myswiper-2" id="swiper4">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="producto">
+                <div class="producto-img">
+                  <h4>2009</h4>
+                  <div class="foto"><img src="img/bitcoin.jpg" alt="Bitcoin" data-foto></div>
+                </div>
+                <div class="producto-text">
+                  <h4>Bitcoin</h4>
+                  <p>Moneda descentralizada.</p>
+                  <span class="inventor">Satoshi Nakamoto</span>
+                  <button class="btn-detalle" onclick="verInvento('bitcoin')">Ver detalle</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- INFO: CONTEXTO HISTÓRICO -->
+  <section id="info" class="info container">
+    <div class="info-img">
+      <div class="chart reveal">
+        <h4>Crecimiento de usuarios de internet</h4>
+        <div class="chart-bars">
+          <div class="bar"><span class="val">1.0B</span><i style="--v:1.0"></i><span class="yr">2005</span></div>
+          <div class="bar"><span class="val">2.0B</span><i style="--v:2.0"></i><span class="yr">2010</span></div>
+          <div class="bar"><span class="val">3.2B</span><i style="--v:3.2"></i><span class="yr">2015</span></div>
+          <div class="bar"><span class="val">4.6B</span><i style="--v:4.6"></i><span class="yr">2020</span></div>
+          <div class="bar"><span class="val">+5.4B</span><i style="--v:5.4"></i><span class="yr">2023</span></div>
+        </div>
+        <small>Fuente estimativa: UIT</small>
+      </div>
+    </div>
+    <div class="info-txt">
+      <h2>Contexto</h2>
+      <p>Tres fuerzas moldearon la época. La <strong>globalización</strong> volvió al mundo interconectado e interdependiente; el <strong>internet masivo</strong> pasó de 1.000 millones de usuarios en 2005 a más de 5.000 millones; y las <strong>crisis y urgencias</strong> económicas, climáticas y sanitarias exigieron respuestas rápidas.</p>
+      <blockquote>"Los inventos del siglo XXI nacieron para resolver problemas… o conectarnos."</blockquote>
+      <a class="btn-2" href="#horario">Ver línea de tiempo</a>
+    </div>
+  </section>
+
+  <!-- HORARIO -> LÍNEA DE TIEMPO -->
+  <section id="horario" class="horario">
+    <div class="horario-info container">
+      <h2>Línea de tiempo</h2>
+      <div class="horario-txt">
+        <div class="txt tec"><h4>2001</h4><p>11-S y nacimiento de Wikipedia</p></div>
+        <div class="txt mundo"><h4>2002</h4><p>El euro entra en circulación</p></div>
+        <div class="txt tec"><h4>2007</h4><p>Lanzamiento del primer iPhone</p></div>
+        <div class="txt mundo"><h4>2008</h4><p>Crisis financiera global</p></div>
+        <div class="txt mundo"><h4>2010</h4><p>Primavera Árabe y redes</p></div>
+        <div class="txt mundo"><h4>2015</h4><p>Acuerdo de París por el Clima</p></div>
+        <div class="txt mundo"><h4>2020</h4><p>Pandemia mundial COVID-19</p></div>
+        <div class="txt tec"><h4>2022</h4><p>Despliegue público de ChatGPT</p></div>
+      </div>
+      <div class="leyenda">
+        <span class="dot tec"></span> Hito tecnológico
+        <span class="dot mundo"></span> Historia mundial
+      </div>
+    </div>
+  </section>
+
+  <!-- INVENTORES: TABLA RESUMEN -->
+  <section id="inventores" class="inventores">
+    <div class="container">
+      <h2>Los cerebros detrás</h2>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Invento</th><th>Año</th><th>Inventor(es) / Equipo</th><th>Función principal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>iPhone</td><td>2007</td><td>Apple / Steve Jobs</td><td>Smartphone + internet táctil</td></tr>
+            <tr><td>Facebook</td><td>2004</td><td>Mark Zuckerberg</td><td>Red social global</td></tr>
+            <tr><td>YouTube</td><td>2005</td><td>Hurley, Chen, Karim</td><td>Plataforma de video online</td></tr>
+            <tr><td>Bitcoin</td><td>2009</td><td>Satoshi Nakamoto</td><td>Moneda descentralizada</td></tr>
+            <tr><td>CRISPR</td><td>2012</td><td>Doudna &amp; Charpentier</td><td>Edición genómica precisa</td></tr>
+            <tr><td>Vacunas ARNm</td><td>2020</td><td>Karikó &amp; Weissman</td><td>Inmunoterapia celular</td></tr>
+            <tr><td>Falcon 9</td><td>2015</td><td>SpaceX / Elon Musk</td><td>Astronáutica reutilizable</td></tr>
+            <tr><td>ChatGPT</td><td>2022</td><td>OpenAI / Google</td><td>IA generativa y síntesis</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </section>
+
+ 
+ 
+
+  <!-- MAPA -->
+  <section class="mapa-sec container">
+    <!-- abrir con Live Server para que el mapa cargue correctamente -->
+    <iframe class="mapa"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.7359785111034!2d-75.26278889999999!3d2.8922719000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b73c456c8b493%3A0x25f9970c2601533e!2sColegio%20Campestre%20%22Padre%20Arturo%22!5e0!3m2!1ses!2sco!4v1754344799150!5m2!1ses!2sco"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <a class="logo-2" href="#"><img src="img/logo-usco.png" alt="Universidad Surcolombiana"></a>
+    <div class="links">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#productos">Inventos</a></li>
+        <li><a href="#info">Contexto</a></li>
+        <li><a href="#horario">Línea de tiempo</a></li>
+        <li><a href="#inventores">Inventores</a></li>
+        <li><a href="#impacto">Importancia hoy</a></li>
+        <li><a href="#giro">Giro de función</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+      </ul>
+    </div>
+    
+    
+  </footer>
+
+  <!-- VENTANA DE DETALLE DE CADA INVENTO -->
+  <dialog id="modal">
+    <div class="modal-inner">
+      <button class="modal-cerrar" onclick="document.getElementById('modal').close()" aria-label="Cerrar">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </dialog>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
